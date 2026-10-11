@@ -34,9 +34,9 @@ A practical reference repository for learning and implementing Spring Security i
 ```text
 spring-security-reference/
 ├── README.md
-├── docs/
-├── 01-basic-security/
-├── 02-form-login/
+<!-- ├── docs/ -->
+├── basic-security/
+<!-- ├── form-login/
 ├── 03-http-basic/
 ├── 04-password-encoding/
 ├── 05-role-based-authorization/
@@ -46,7 +46,7 @@ spring-security-reference/
 ├── 09-cors-and-csrf/
 ├── 10-exception-handling/
 ├── 11-refresh-tokens/
-└── 12-testing-security/
+└── 12-testing-security/ -->
 ```
 
 Each module focuses on a specific security feature and includes implementation examples and explanations.
