@@ -1,0 +1,53 @@
+# Spring Security Reference
+
+A practical reference repository for learning and implementing Spring Security in Spring Boot applications.
+
+## Topics Covered
+
+- Basic Spring Security configuration
+- Form-based authentication
+- HTTP Basic authentication
+- Password encoding using BCrypt
+- Role-based access control (RBAC)
+- JWT authentication and authorization
+- Custom security filters using `OncePerRequestFilter`
+- `SecurityContextHolder` and authentication management
+- Method-level security using `@PreAuthorize`
+- CORS and CSRF configuration
+- Custom authentication and access-denied handling
+- JWT refresh tokens
+- Security testing using JUnit and Spring Security Test
+
+## Technology Stack
+
+- Java 21
+- Spring Boot
+- Spring Security
+- Maven
+- Spring Data JPA
+- PostgreSQL
+- JJWT
+- JUnit 5
+
+## Repository Structure
+
+```text
+spring-security-reference/
+├── README.md
+├── docs/
+├── 01-basic-security/
+├── 02-form-login/
+├── 03-http-basic/
+├── 04-password-encoding/
+├── 05-role-based-authorization/
+├── 06-jwt-authentication/
+├── 07-custom-security-filter/
+├── 08-method-level-security/
+├── 09-cors-and-csrf/
+├── 10-exception-handling/
+├── 11-refresh-tokens/
+└── 12-testing-security/
+```
+
+Each module focuses on a specific security feature and includes implementation examples and explanations.
+
