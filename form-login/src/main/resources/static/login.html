@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Apply flex layout to the whole body so everything aligns nicely */
+        body {
+          height: 100vh;
+          margin: 0;
+          display: flex;
+          flex-direction: column;   /* Stacks everything vertically */
+          justify-content: center;  /* Centers vertically */
+          align-items: center;      /* Centers horizontally */
+          font-family: sans-serif;
+        }
+
+        /* Fixed: Changed from invalid "flex-row" to standard "flex" */
+        .div {
+          display: flex;
+          flex-direction: column;   /* Stacks input rows vertically */
+          gap: 10px;                /* Creates clean space between fields */
+        }
+    </style>
+</head>
+
+<body>
+<p id="error-message"></p>
+<h2>Login</h2>
+
+<form action="/login" method="post" >
+    <div class="div">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit">Login</button>
+    </div>
+</form>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const errorMessage = document.getElementById("error-message");
+
+    if (params.has("error")) {
+        errorMessage.textContent = "Invalid username or password.";
+        errorMessage.style.color = "red";
+    }
+
+    if (params.has("logout")) {
+        errorMessage.textContent = "You have been logged out successfully.";
+        errorMessage.style.color = "green";
+    }
+</script>
+</body>
+</html>
